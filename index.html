@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sonia Ibrahim · Websites</title>
+  <meta name="description" content="Websites and web tools designed and built by Sonia Ibrahim: portfolios, event platforms, participatory apps and content-intake systems. Open for freelance work.">
+  <meta property="og:title" content="Sonia Ibrahim · Websites">
+  <meta property="og:description" content="Websites and web tools for places, institutions and projects. Open for freelance work.">
+  <meta property="og:image" content="https://soniaarchitect.github.io/assets/soniaibrahim.jpg">
+  <meta property="og:url" content="https://soniaarchitect.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --surface: #fffdf9;
+      --ink: #1f2233;
+      --muted: #5b5e6e;
+      --line: #e3ddd2;
+      --accent: #2f6d6a;
+      --gold: #8a6a3b;
+      --shadow: 0 1px 2px rgba(31, 34, 51, .06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0c10;
+        --surface: #15171f;
+        --ink: #f1ece4;
+        --muted: #a5a7b3;
+        --line: #272a36;
+        --accent: #4f9a95;
+        --gold: #c4a06a;
+        --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 1.0625rem/1.6 "Josefin Sans", system-ui, sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    header { padding: 72px 0 56px; border-bottom: 1px solid var(--line); }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -.01em;
+    }
+    .lede { max-width: 40rem; margin: 20px 0 32px; color: var(--muted); font-size: 1.2rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px 10px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .btn.primary { background: var(--ink); color: var(--bg); }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent); }
+
+    main { padding: 56px 0 24px; }
+    h2 {
+      margin: 0 0 28px;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr));
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .card .shot {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform .6s ease;
+    }
+    .card:hover img { transform: scale(1.02); }
+    .body { display: flex; flex: 1; flex-direction: column; padding: 22px 24px 24px; }
+    .kind {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h3 { margin: 0 0 8px; font-size: 1.35rem; font-weight: 600; line-height: 1.25; }
+    h3 a { text-decoration: none; }
+    h3 a:hover { color: var(--accent); }
+    .body p.desc { margin: 0 0 16px; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: auto 0 18px; padding: 0; list-style: none; }
+    .tags li {
+      padding: 3px 10px 1px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    .visit {
+      align-self: flex-start;
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .visit:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    .contact {
+      margin: 64px 0 0;
+      padding: 48px 0;
+      border-top: 1px solid var(--line);
+    }
+    .contact h2 { margin-bottom: 12px; }
+    .contact p { max-width: 38rem; margin: 0 0 24px; font-size: 1.2rem; }
+    footer { padding: 24px 0 48px; color: var(--muted); font-size: .85rem; }
+
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { .card img { transition: none; } }
+    @media (max-width: 600px) {
+      header { padding: 48px 0 40px; }
+      .wrap { padding: 0 16px; }
+      .body { padding: 18px 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Sonia Ibrahim · Architect &amp; web developer</p>
+      <h1>Websites for places,<br>institutions and projects.</h1>
+      <p class="lede">I design and build portfolios, event platforms, participatory apps and content-intake systems, in English, Italian and Arabic. Below are live sites I have built or manage.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:architectsoniaibrahim@gmail.com?subject=Website%20project">Start a project</a>
+        <a class="btn" href="https://www.linkedin.com/in/sonia-ibrahim/">LinkedIn</a>
+        <a class="btn" href="https://github.com/SoniaArchitect">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>Selected websites</h2>
+    <ul class="grid">
+      <li class="card">
+        <a class="shot" href="https://www.soniaibrahim.it/"><img src="assets/soniaibrahim.jpg" alt="Home page of soniaibrahim.it: the Damascus Citadel under the headline Places under pressure, made legible" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Personal · professional site</p>
+          <h3><a href="https://www.soniaibrahim.it/">soniaibrahim.it</a></h3>
+          <p class="desc">My professional site for territorial strategy, communication and heritage. Trilingual, with content edited from a database rather than in code.</p>
+          <ul class="tags"><li>EN · IT · AR</li><li>TypeScript</li><li>SQLite</li><li>Self-hosted</li></ul>
+          <a class="visit" href="https://www.soniaibrahim.it/">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://comunicazione.ecosistemasherpasrl.it/"><img src="assets/hub.jpg" alt="Sherpa Communication Hub landing page with two paths: request support or share materials" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Client · Sherpa SRL</p>
+          <h3><a href="https://comunicazione.ecosistemasherpasrl.it/">Sherpa Communication Hub</a></h3>
+          <p class="desc">An AI-assisted intake platform where a team and its network propose content and request communication support. Two guided paths, photo uploads and a staff area.</p>
+          <ul class="tags"><li>Web app</li><li>AI-assisted forms</li><li>IT · EN</li></ul>
+          <a class="visit" href="https://comunicazione.ecosistemasherpasrl.it/">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://ascoltami-parlami.ecosistemasherpasrl.it/"><img src="assets/ascoltami.jpg" alt="Ascoltami–Parlami Interactive Lab landing page for RelazionEXPO 2026" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Client · Sherpa SRL</p>
+          <h3><a href="https://ascoltami-parlami.ecosistemasherpasrl.it/">Ascoltami–Parlami Interactive Lab</a></h3>
+          <p class="desc">A participatory app for RelazionEXPO 2026 in Verona. Students answer from their phones via QR code, while a facilitator console and a live projection show the shared result.</p>
+          <ul class="tags"><li>Real-time</li><li>PostgreSQL</li><li>Docker</li></ul>
+          <a class="visit" href="https://ascoltami-parlami.ecosistemasherpasrl.it/">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://cti-treviso.ecosistemasherpasrl.it/"><img src="assets/cti.jpg" alt="CTI Treviso working sheet landing page with a session QR code" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Client · Sherpa SRL</p>
+          <h3><a href="https://cti-treviso.ecosistemasherpasrl.it/">CTI Treviso · Working sheet</a></h3>
+          <p class="desc">A participatory working sheet for the Territorial Council for Immigration of Treviso. Participants join by QR code, score local friction points and rank strategic levers, with projection and decision views for the room.</p>
+          <ul class="tags"><li>Participatory app</li><li>QR sessions</li><li>Live projection</li></ul>
+          <a class="visit" href="https://cti-treviso.ecosistemasherpasrl.it/">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://communitysherpa.it/sherpa-ecosistema-live-word-cloud"><img src="assets/community.jpg" alt="Sherpa Community training programme page: Oltre i modelli lineari" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Client · Sherpa SRL</p>
+          <h3><a href="https://communitysherpa.it/sherpa-ecosistema-live-word-cloud">Sherpa Community · Oltre i modelli lineari</a></h3>
+          <p class="desc">The site for a three-day residential training programme: programme, materials, registration and a preparatory questionnaire.</p>
+          <ul class="tags"><li>React</li><li>Vite</li><li>TypeScript</li><li>Tailwind</li><li>IT · EN</li></ul>
+          <a class="visit" href="https://communitysherpa.it/sherpa-ecosistema-live-word-cloud">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://ciofs.soniaibrahim.it/"><img src="assets/ciofs.jpg" alt="Portfolio page for Sonia Ibrahim, Communication and Social Media Manager" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Personal · portfolio</p>
+          <h3><a href="https://ciofs.soniaibrahim.it/">Communication portfolio</a></h3>
+          <p class="desc">A bilingual portfolio and final report for a professional qualification in communication and promotional campaigns.</p>
+          <ul class="tags"><li>IT · EN</li><li>Static site</li><li>Self-hosted</li></ul>
+          <a class="visit" href="https://ciofs.soniaibrahim.it/">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://mosaicdamasco.altervista.org/"><img src="assets/mosaic.jpg" alt="Mosaic Damasco home page: a portrait wearing an eight-pointed star earring" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Own brand</p>
+          <h3><a href="https://mosaicdamasco.altervista.org/">Mosaic Damasco</a></h3>
+          <p class="desc">A brand site and shop for jewellery inspired by the mosaics of Damascus.</p>
+          <ul class="tags"><li>WordPress</li><li>Brand identity</li><li>Shop</li><li>Blog</li></ul>
+          <a class="visit" href="https://mosaicdamasco.altervista.org/">Visit site →</a>
+        </div>
+      </li>
+      <li class="card">
+        <a class="shot" href="https://www.sherpasrl.it/"><img src="assets/sherpasrl.jpg" alt="Sherpa SRL home page: a University of Padova spin-off for local development" loading="lazy" width="960" height="600"></a>
+        <div class="body">
+          <p class="kind">Client · Sherpa SRL · site management</p>
+          <h3><a href="https://www.sherpasrl.it/">sherpasrl.it</a></h3>
+          <p class="desc">The website of Sherpa SRL, a University of Padova spin-off. I manage the site: content, pages and custom HTML sections built into the Elementor layouts.</p>
+          <ul class="tags"><li>WordPress</li><li>Elementor</li><li>Custom HTML sections</li></ul>
+          <a class="visit" href="https://www.sherpasrl.it/">Visit site →</a>
+        </div>
+      </li>
+    </ul>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Work with me</h2>
+      <p>Need a site, an event platform or an interactive tool? Tell me what it is for and who will use it.</p>
+      <a class="btn primary" href="mailto:architectsoniaibrahim@gmail.com?subject=Website%20project">architectsoniaibrahim@gmail.com</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Client projects are shown with their live sites and screenshots. Their source code stays private.</div>
+  </footer>
+</body>
+</html>
